@@ -81,9 +81,9 @@ $ webpack
 
 ## 目录
 
-1. [单文件入口](#demo01-entry-file-source)
-1. [多文件入口](#demo02-multiple-entry-files-source)
-1. [Babel-loader](#demo03-babel-loader-source)
+1. [单文件入口](#demo01)
+1. [多文件入口](#demo02)
+1. [Babel-loader](#demo03)
 1. [CSS-loader](#demo04-css-loader-source)
 1. [Image loader](#demo05-image-loader-source)
 1. [CSS Module](#demo06-css-module-source)
@@ -956,9 +956,9 @@ index.html
 </html>
 ```
 
-## Demo16: React router ([源码](https://github.com/holidaying/webpack-demos/demo16))
+## Demo16: React router例子 ([源码](https://github.com/holidaying/webpack-demos/demo16))
 
-This demo uses webpack to build [React-router](https://github.com/rackt/react-router/blob/0.13.x/docs/guides/overview.md)'s 官方例子.
+利用webpack做的例子 [React-router](https://github.com/rackt/react-router/blob/0.13.x/docs/guides/overview.md)'s 官方例子.
 
 Let's imagine a little app with a dashboard, inbox, and calendar.
 
