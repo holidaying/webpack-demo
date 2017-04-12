@@ -29,10 +29,11 @@ $ webpack-dev-server
 
 ## 什么是webpack？
 
-Webpack 是前端的打包工具类类似于 Grunt and Gulp.但是有区别，因为它是模块化构建
-
- [更多信息](http://webpack.github.io/docs/what-is-webpack.html).
-
+Webpack 是前端的打包工具类类似于 Grunt and Gulp.但是有区别，因为它是模块化构建机制，Webpack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。
+WebPack和Grunt以及Gulp相比有什么特性
+其实Webpack和另外两个并没有太多的可比性，Gulp/Grunt是一种能够优化前端的开发流程的工具，而WebPack是一种模块化的解决方案，不过Webpack的优点使得Webpack可以替代Gulp/Grunt类的工具。
+Grunt和Gulp的工作方式是：在一个配置文件中，指明对某些文件进行类似编译，组合，压缩等任务的具体步骤，这个工具之后可以自动替你完成这些任务。
+[更多信息](http://webpack.github.io/docs/what-is-webpack.html).
 ```命令行
 
 $ webpack main.js bundle.js
@@ -138,7 +139,7 @@ $ webpack-dev-server
 
 ## Demo02: 多文件入口([源码](https://github.com/holidaying/webpack-demos/demo02))
 
-Multiple entry files are allowed. It is useful for a multi-page app.
+多个入口文件，实用于多个页面的应用
 
 ```javascript
 // main1.js
@@ -175,9 +176,9 @@ module.exports = {
 
 ## Demo03: Babel-loader ([源码](https://github.com/holidaying/webpack-demos/demo03))
 
-Loaders are preprocessors which transform a resource file of your app ([more info](http://webpack.github.io/docs/using-loaders.html)). For example, [Babel-loader](https://www.npmjs.com/package/babel-loader) can transform JSX/ES6 file into JS file. Official doc has a complete list of [loaders](http://webpack.github.io/docs/list-of-loaders.html).
+通过使用不同的loader，webpack通过调用外部的脚本或工具可以对各种各样的格式的文件进行处理([更多信息](http://webpack.github.io/docs/using-loaders.html)). 例如, [Babel-loader](https://www.npmjs.com/package/babel-loader) Babel其实是一个编译JavaScript的平台可以将 JSX/ES6 文件转换成浏览器可以识别的js文件. 官方文档[loaders](http://webpack.github.io/docs/list-of-loaders.html).
 
-`main.jsx` is a JSX file.
+`main.jsx` is a JSX 文件.
 
 ```javascript
 const React = require('react');
@@ -220,7 +221,7 @@ module.exports = {
 };
 ```
 
-In `webpack.config.js`, `module.loaders` field is used to assign loaders. The above snippet uses `babel-loader` which also needs plugins [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) and [babel-preset-react](https://www.npmjs.com/package/babel-preset-react) to transpile ES6 and React. You can also take another way to set the babel query option.
+在 `webpack.config.js`, `module.loaders` 区域是用来分配loader的. 像上面的代码片段使用了 `babel-loader` 需要安装插件 [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) 和 [babel-preset-react](https://www.npmjs.com/package/babel-preset-react) to 编译成 ES6 and React. 可以用query配置参数
 
 ```javascript
 module: {
@@ -239,7 +240,7 @@ module: {
 
 ## Demo04: CSS-loader ([源码](https://github.com/holidaying/webpack-demos/demo04))
 
-Webpack allows you to require CSS in JS file, then preprocessed CSS file with CSS-loader.
+Webpack 允许你在js文件中require CSS , 通过 CSS-loader来预处理css文件.
 
 main.js
 
@@ -284,9 +285,9 @@ module.exports = {
 };
 ```
 
-Attention, you have to use two loaders to transform CSS file. First is [CSS-loader](https://www.npmjs.com/package/css-loader) to read CSS file, and another is [Style-loader](https://www.npmjs.com/package/style-loader) to insert Style tag into HTML page. Different loaders are linked by exclamation mark(!).
+但是,你需要使用2中loaders来转换CSS 文件. 第一个是 [CSS-loader](https://www.npmjs.com/package/css-loader) 来读取CSS文件, 另外一个是[Style-loader](https://www.npmjs.com/package/style-loader) 是将style样式插入到html中。 中间用！连接
 
-After launching the server, `index.html` will have internal style sheet.
+启动服务后, `index.html` 有内部样式.
 
 ```html
 <head>
