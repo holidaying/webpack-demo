@@ -434,17 +434,17 @@ module.exports = {
 };
 ```
 
-Launch the server.
+启动服务.
 
-```bash
+```命令行
 $ webpack-dev-server
 ```
 
-Visit http://127.0.0.1:8080 , you'll find that only second `h1` is red, because its CSS is local scoped, and both `h2` is blue, because its CSS is global scoped.
+访问 http://127.0.0.1:8080 , 你将看到只有第二个 `h1` 是红的,因为它是局部, 同时 `h2` 是蓝色的, 因为是`h2`全局的.
 
 ## Demo07: UglifyJs Plugin ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo07))
 
-Webpack has a plugin system to expand its functions. For example, [UglifyJs Plugin](http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin) will minify output(`bundle.js`) JS codes.
+Webpack 可以去掉本身附加的东西，优化代码 [UglifyJs Plugin](http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin) will minify output(`bundle.js`) JS codes.
 
 main.js
 
@@ -492,9 +492,9 @@ var o="Hello";o+=" World",document.write("<h1>"+o+"</h1>")
 
 ## Demo08: HTML Webpack Plugin and Open Browser Webpack Plugin ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo08))
 
-This demo shows you how to load 3rd-party plugins.
+这个例子需要加载三个插件
 
-[html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin) could create `index.html` for you, and [open-browser-webpack-plugin](https://github.com/baldore/open-browser-webpack-plugin) could open a new browser tab when Webpack loads.
+[html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin) 创建 `index.html` ，[open-browser-webpack-plugin](https://github.com/baldore/open-browser-webpack-plugin) 打开浏览器
 
 main.js
 
@@ -525,13 +525,12 @@ module.exports = {
 };
 ```
 
-Run `webpack-dev-server`.
-
-```bash
+启动 `webpack-dev-server`.启动这个需要node7版本以上
+```命令行
 $ webpack-dev-server
 ```
 
-Now you don't need to write `index.html` by hand and don't have to open browser by yourself. Webpack did all these things for you.
+不用手写`index.html` 也不用手动打开浏览器 Webpack 可以为你做这些事.
 
 ## Demo09: 设置环境变量([源码](https://github.com/holidaying/webpack-demos/tree/master/demo09))
 
