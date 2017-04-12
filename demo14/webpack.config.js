@@ -1,3 +1,4 @@
+//用模块化代替全局变量的获取方式，挺有意思的挺有意思的挺有意思的挺有意思的 cdn上挂载
 module.exports = {
   entry: './main.jsx',
   output: {
@@ -11,7 +12,7 @@ module.exports = {
   externals: {
     // require("jquery") is external and available
     //  on the global var jQuery
-    //  "jquery": "jQuery"
-    'data': 'data'
+    "jQuery": "window.$",
+    'data2': 'data'
   }
 };

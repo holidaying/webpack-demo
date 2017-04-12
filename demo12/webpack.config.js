@@ -1,3 +1,6 @@
+//CommonsChunkPlugins是webpack自身的方法，功能是提取两个方法共有的代码模块
+var webpack = require('webpack');
+var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 module.exports = {
   entry: {
@@ -13,6 +16,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new CommonsChunkPlugin('init.js')
+    new CommonsChunkPlugin('init.js'),
+    new uglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
   ]
 }

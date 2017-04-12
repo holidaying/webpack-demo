@@ -42,9 +42,15 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	document.write('<h1>Hello World</h1>');
+	var load = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"bundle-loader!./a.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	load(function(file) {
+	  document.open();
+	  document.write('<h1>' + file + '</h1>');
+	  document.close();
+	});
 
 
 /***/ }
