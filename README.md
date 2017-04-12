@@ -3,7 +3,7 @@
 首先教大家2个新技能
 * 1.按照正常github地址情况下，你的github本身不能访问目录。
 
-* 例如要访问vue-demo下的vueCpu文件夹:https://github.com/holidaying/vue-demo/vueCpu   404
+* 例如要访问vue-demo下的vueCpu文件夹:https://github.com/holidaying/vue-demo/vueCpu   （显示404）
 
 但是在目录上加上tree/master/：https://github.com/holidaying/vue-demo/tree/master/vueCpu （master是分支名）就可以访问。
 
