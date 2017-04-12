@@ -12,7 +12,7 @@
     "dev": "webpack-dev-server --devtool eval --progress --colors",
     "deploy": "NODE_ENV=production webpack -p"
   },
-  "author": "Ruan Yifeng",
+  "author": "holidaying",
   "license": "MIT",
   "dependencies": {
     "babel-core": "6.x",
