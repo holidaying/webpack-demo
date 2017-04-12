@@ -98,7 +98,7 @@ $ webpack
 1. [热模块替代/热更新](#demo15-hot-module-replacement-source)
 1. [React router](#demo16-react-router-source)
 
-## Demo01: 单文件入口 ([source](https://github.com/holidaying/webpack-demos/demo01))
+## Demo01: 单文件入口 ([源码](https://github.com/holidaying/webpack-demos/demo01))
 
 Webpack会入口文件进行打包成bundle.js.
 
