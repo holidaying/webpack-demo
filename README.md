@@ -579,9 +579,22 @@ $ webpack-dev-server
 
 ## Demo10: Code splitting ([source](https://github.com/holidaying/webpack-demos/demo10))
 
-For big web apps it’s not efficient to put all code into a single file, Webpack allows you to split them into several chunks. Especially if some blocks of code are only required under some circumstances, these chunks could be loaded on demand.
+对于大型项目，把所有代码编译到一个文件并不是有效的, Webpack 允许你把代码分成好多块. 特别是某种情况下，只需要个别代码这些块可以按需加载。
+在commonjs中有一个Modules/Async/A规范，里面定义了require.ensure语法。webpack实现了它，作用是可以在打包的时候进行代码分片，并异步加载分片后的代码。用法如下：
+require.ensure([], function(require){
+    var list = require('./list');
+    list.show();
+});
+此时list.js会被打包成一个单独的chunk文件，大概长这样：
+1.fb874860b35831bc96a8.js
+可读性比较差。我在上一篇结尾也提到了，给它命名的方式，那就是给require.ensure传递第三个参数，如：
 
-At first, you use `require.ensure` to define a split point. ([official document](http://webpack.github.io/docs/code-splitting.html))
+require.ensure([], function(require){
+    var list = require('./list');
+    list.show();
+}, 'list');
+这样就能得到你想要的文件名称：
+首先，你需要用 `require.ensure` to 来定义一个分割的点. ([官方文档](http://webpack.github.io/docs/code-splitting.html))
 
 ```javascript
 // main.js
@@ -593,7 +606,7 @@ require.ensure(['./a'], function(require) {
 });
 ```
 
-`require.ensure` tells Webpack that `./a.js` should be separated from `bundle.js` and built into a single chunk file.
+`require.ensure` 告诉 Webpack  `./a.js` 应该从 `bundle.js` 中分离成一个单独的块
 
 ```javascript
 // a.js
@@ -621,17 +634,17 @@ module.exports = {
 };
 ```
 
-Launch the server.
+地洞服务.
 
-```bash
+```命令行文件
 $ webpack-dev-server
 ```
 
-On the surface, you won't feel any differences. However, Webpack actually builds `main.js` and `a.js` into different chunks(`bundle.js` and `1.bundle.js`), and loads `1.bundle.js` from `bundle.js` when on demand.
+在界面上, 你感觉不到任何不一样的地方. 但是, Webpack 已经把 `main.js` 和 `a.js` 编译成(`bundle.js` 和 `1.bundle.js`)的块。
 
-## Demo11: Code splitting with bundle-loader ([source](https://github.com/holidaying/webpack-demos/demo11))
+## Demo11: 通过bundle-loader进行代码分裂 ([source](https://github.com/holidaying/webpack-demos/demo11))
 
-Another way of code splitting is using [bundle-loader](https://www.npmjs.com/package/bundle-loader).
+dem10是一种，另一种是利用[bundle-loader](https://www.npmjs.com/package/bundle-loader).
 
 ```javascript
 // main.js
@@ -654,7 +667,7 @@ Now Webpack will build `main.js` into `bundle.js`, and `a.js` into `1.bundle.js`
 
 ## Demo12: Common chunk ([source](https://github.com/holidaying/webpack-demos/demo12))
 
-When multi scripts have common chunks, you can extract the common part into a separate file with CommonsChunkPlugin.
+利用webpack.optimize.CommonsChunkPlugin，你可以共通的组件，代码块分离出来
 
 ```javascript
 // main1.jsx
@@ -722,7 +735,7 @@ module.exports = {
 
 ## Demo13: Vendor chunk ([source](https://github.com/holidaying/webpack-demos/demo13))
 
-You can also extract the vendor libraries from a script into a separate file with CommonsChunkPlugin.
+利用ebpack.optimize.CommonsChunkPlugin，你可以把第三方库抽离出来
 
 main.js
 
@@ -762,7 +775,7 @@ module.exports = {
 };
 ```
 
-If you want a module available as variable in every module, such as making $ and jQuery available in every module without writing `require("jquery")`. You should use `ProvidePlugin` ([Official doc](http://webpack.github.io/docs/shimming-modules.html)).
+If you want a module available as variable in every module, such as making $ and jQuery available in every module without writing `require("jquery")`. You should use `ProvidePlugin` ([官方文档](http://webpack.github.io/docs/shimming-modules.html)).
 
 ```javascript
 // main.js
