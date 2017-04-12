@@ -78,20 +78,6 @@ $ webpack
   // ...
 }
 ```
-- [Introduction](#introduction)
-- [Features & Limitition](#features--limitition)
-- [Usage](#usage)
-- [License](#license)
-- [Showcase](#showcase)
-    - [I am happy to be the Section 1](#i-am-happy-to-be-the-section-1)
-        - [Section 1 is my boss](#section-1-is-my-boss)
-            - [Hey, the guy above, you are my boss!](#hey-the-guy-above-you-are-my-boss)
-                - [I am not boss at all,shame!](#i-am-not-boss-at-allshame)
-    - [I stand on Section2 and I am empty](#i-stand-on-section2-and-i-am-empty)
-        - [No you are not, In my subSection, you find characters](#no-you-are-not-in-my-subsection-you-find-characters)
-            - [Here I test: `"([<&>]) and *$#+"`](#here-i-test--and-)
-    - [OK, that's it](#ok-thats-it)
-
 ## 目录
 
 1. [单文件入口](#demo01)
@@ -108,7 +94,7 @@ $ webpack
 1. [Common chunk提取公共文件](#demo12-common-chunk-source)
 1. [Vendor chunk提取公共的第三方代码](#demo13-vendor-chunk-source)
 1. [externals全局变量](#demo14-exposing-global-variables-source)
-1. [热模块替代/热更新](#demo15-热模块替换-热更新 )
+1. [热模块替代/热更新](#demo15-热模块替换-热更新)
 1. [React router](#demo16-react-router-source)
 
 ## Demo01: 单文件入口 ([源码](https://github.com/holidaying/webpack-demos/demo01))
