@@ -351,7 +351,8 @@ module.exports = {
 };
 ```
 
-[url-loader](https://www.npmjs.com/package/url-loader) transforms image files. If the image size is smaller than 8192 bytes, it will be transformed into Data URL; otherwise, it will be transformed into normal URL. As you see, question mark(?) is used to pass parameters into loaders.
+[url-loader](https://www.npmjs.com/package/url-loader) 转换图片文件. 如果图片的大小小于 8192 bytes,它将会转成base64位的地址; 相反, 它就是普通地址. 
+参数前是用？连接的
 
 启动服务后, `small.png` and `big.png` 将会有一下的地址.
 
