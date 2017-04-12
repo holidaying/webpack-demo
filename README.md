@@ -354,7 +354,7 @@ module.exports = {
 
 `css-loader?modules` (the query parameter modules) enables the [CSS Modules](https://github.com/css-modules/css-modules) spec.
 
-It means your module's CSS is local scoped CSS by default. You can switch it off with `:global(...)` for selectors and/or rules. ([more info](https://css-modules.github.io/webpack-demo/))
+CSS Module可以开启全局变量和局部变量，:global(...)表示全局变量，可以在全局中使用样式([更多信息](https://css-modules.github.io/webpack-demo/))
 
 index.html
 
