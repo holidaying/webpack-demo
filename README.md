@@ -97,7 +97,7 @@ $ webpack
 1. [热模块替代/热更新](#demo15-热模块替换-热更新)
 1. [React router](#demo16-react-router--源码)
 
-## Demo01: 单文件入口 ([源码](https://github.com/holidaying/webpack-demos/demo01))
+## Demo01: 单文件入口 ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo01))
 
 Webpack会入口文件进行打包成bundle.js.
 
@@ -136,7 +136,7 @@ module.exports = {
 $ webpack-dev-server
 ```
 
-## Demo02: 多文件入口([源码](https://github.com/holidaying/webpack-demos/demo02))
+## Demo02: 多文件入口([源码](https://github.com/holidaying/webpack-demos/tree/master/demo02))
 
 多个入口文件，实用于多个页面的应用
 
@@ -173,7 +173,7 @@ module.exports = {
 };
 ```
 
-## Demo03: Babel-loader ([源码](https://github.com/holidaying/webpack-demos/demo03))
+## Demo03: Babel-loader ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo03))
 
 通过使用不同的loader，webpack通过调用外部的脚本或工具可以对各种各样的格式的文件进行处理([更多信息](http://webpack.github.io/docs/using-loaders.html)). 例如, [Babel-loader](https://www.npmjs.com/package/babel-loader) Babel其实是一个编译JavaScript的平台可以将 JSX/ES6 文件转换成浏览器可以识别的js文件. 官方文档[loaders](http://webpack.github.io/docs/list-of-loaders.html).
 
@@ -237,7 +237,7 @@ module: {
 }
 ```
 
-## Demo04: CSS-loader ([源码](https://github.com/holidaying/webpack-demos/demo04))
+## Demo04: CSS-loader ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo04))
 
 Webpack 允许你在js文件中require CSS , 通过 CSS-loader来预处理css文件.
 
@@ -299,7 +299,7 @@ module.exports = {
 </head>
 ```
 
-## Demo05: Image loader ([源码](https://github.com/holidaying/webpack-demos/demo05))
+## Demo05: Image loader ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo05))
 
 Webpack 允许你在js文件中require图片 , 通过 url-loader和file-loader来预处理图片文件.
 
@@ -350,7 +350,7 @@ module.exports = {
 <img src="4853ca667a2b8b8844eb2693ac1b2578.png">
 ```
 
-## Demo06: CSS Module ([源码](https://github.com/holidaying/webpack-demos/demo06))
+## Demo06: CSS Module ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo06))
 
 `css-loader?modules` (the query parameter modules) enables the [CSS Modules](https://github.com/css-modules/css-modules) spec.
 
@@ -432,7 +432,7 @@ $ webpack-dev-server
 
 Visit http://127.0.0.1:8080 , you'll find that only second `h1` is red, because its CSS is local scoped, and both `h2` is blue, because its CSS is global scoped.
 
-## Demo07: UglifyJs Plugin ([源码](https://github.com/holidaying/webpack-demos/demo07))
+## Demo07: UglifyJs Plugin ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo07))
 
 Webpack has a plugin system to expand its functions. For example, [UglifyJs Plugin](http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin) will minify output(`bundle.js`) JS codes.
 
@@ -480,7 +480,7 @@ module.exports = {
 var o="Hello";o+=" World",document.write("<h1>"+o+"</h1>")
 ```
 
-## Demo08: HTML Webpack Plugin and Open Browser Webpack Plugin ([源码](https://github.com/holidaying/webpack-demos/demo08))
+## Demo08: HTML Webpack Plugin and Open Browser Webpack Plugin ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo08))
 
 This demo shows you how to load 3rd-party plugins.
 
@@ -523,7 +523,7 @@ $ webpack-dev-server
 
 Now you don't need to write `index.html` by hand and don't have to open browser by yourself. Webpack did all these things for you.
 
-## Demo09: 设置环境变量([源码](https://github.com/holidaying/webpack-demos/demo09))
+## Demo09: 设置环境变量([源码](https://github.com/holidaying/webpack-demos/tree/master/demo09))
 
 你可以利用环境变量来控制特定代码的输出
 
@@ -574,7 +574,7 @@ $ set DEBUG=true
 $ webpack-dev-server
 ```
 
-## Demo10: Code splitting ([源码](https://github.com/holidaying/webpack-demos/demo10))
+## Demo10: Code splitting ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo10))
 
 对于大型项目，把所有代码编译到一个文件并不是有效的, Webpack 允许你把代码分成好多块. 特别是某种情况下，只需要个别代码这些块可以按需加载。
 在commonjs中有一个Modules/Async/A规范，里面定义了require.ensure语法。webpack实现了它，作用是可以在打包的时候进行代码分片，并异步加载分片后的代码。用法如下：
@@ -638,7 +638,7 @@ $ webpack-dev-server
 
 在界面上, 你感觉不到任何不一样的地方. 但是, Webpack 已经把 `main.js` 和 `a.js` 编译成(`bundle.js` 和 `1.bundle.js`)的块。
 
-## Demo11: 通过bundle-loader进行代码分裂 ([源码](https://github.com/holidaying/webpack-demos/demo11))
+## Demo11: 通过bundle-loader进行代码分裂 ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo11))
 
 dem10是一种，另一种是利用[bundle-loader](https://www.npmjs.com/package/bundle-loader).
 
@@ -661,7 +661,7 @@ load(function(file) {
 
 Now Webpack will build `main.js` into `bundle.js`, and `a.js` into `1.bundle.js`.
 
-## Demo12: Common chunk ([源码](https://github.com/holidaying/webpack-demos/demo12))
+## Demo12: Common chunk ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo12))
 
 利用webpack.optimize.CommonsChunkPlugin，你可以共通的组件，代码块分离出来
 
@@ -729,7 +729,7 @@ module.exports = {
 }
 ```
 
-## Demo13: Vendor chunk ([源码](https://github.com/holidaying/webpack-demos/demo13))
+## Demo13: Vendor chunk ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo13))
 
 利用ebpack.optimize.CommonsChunkPlugin，你可以把第三方库抽离出来
 
@@ -800,7 +800,7 @@ module.exports = {
 插件会执行两次这个方法，第一次将公共的第三方代码抽离移到vendor的块中，这个过程之前也讲过会将运行时runtime也转移到vendor块中，第二次执行则是将运行时runtime抽离出来转移到manifest块中。这步操作解决了缓存问题。
 这样处理，最后会生成3个打包文件chunk，app.js是业务代码，vendor则是公共的第三方代码，manifest.js则是运行时。
 
-## Demo14: Exposing global variables ([源码](https://github.com/holidaying/webpack-demos/demo14))
+## Demo14: Exposing global variables ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo14))
 
 webpack可以不处理应用的某些依赖库，使用externals配置后，依旧可以在代码中通过CMD、AMD或者window/global全局的方式访问。如果你想引入一些全局变量, 但是不想被加载处理, 你可以在 `webpack.config.js` 使用 `externals` 模块 ([官方文档](http://webpack.github.io/docs/library-and-externals.html)).
 有时我们希望我们通过script引入的库，如用CDN的方式引入的jquery，我们在使用时，依旧用require的方式来使用，但是却不希望webpack将它又编译进文件中。
@@ -854,7 +854,7 @@ ReactDOM.render(
 );
 ```
 
-## Demo15: 热模块替换/热更新 ([源码](https://github.com/holidaying/webpack-demos/demo15))
+## Demo15: 热模块替换/热更新 ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo15))
 
 [Hot Module Replacement](https://github.com/webpack/docs/wiki/hot-module-replacement-with-webpack) (HMR) exchanges, adds, or removes modules while an application is running **without a page reload**.
 
@@ -955,7 +955,7 @@ index.html
 </html>
 ```
 
-## Demo16: React router例子 ([源码](https://github.com/holidaying/webpack-demos/demo16))
+## Demo16: React router例子 ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo16))
 
 利用webpack做的例子 [React-router](https://github.com/rackt/react-router/blob/0.13.x/docs/guides/overview.md)'s 官方例子.
 
