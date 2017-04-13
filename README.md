@@ -104,7 +104,7 @@ $ webpack
 1. [Common chunk提取公共文件](#demo12-common-chunk-源码)
 1. [Vendor chunk提取公共的第三方代码](#demo13-vendor-chunk-源码)
 1. [externals全局变量](#demo14-exposing_global-variables-源码)
-1. [热模块替代/热更新](#demo15-热模块替换/热更新-源码)
+1. [热模块替代/热更新](#demo15-热模块替换热更新-源码)
 1. [React router](#demo16-react-router例子-源码)
 
 ## Demo01: 单文件入口 ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo01))
@@ -864,7 +864,7 @@ ReactDOM.render(
 );
 ```
 
-## Demo15: 热模块替换/热更新  ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo15))
+## Demo15 热模块替换热更新  ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo15))
 
 [Hot Module Replacement](https://github.com/webpack/docs/wiki/hot-module-replacement-with-webpack) (HMR) exchanges, adds, or removes modules while an application is running **without a page reload**.
 
