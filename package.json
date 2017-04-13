@@ -13,7 +13,6 @@
     "deploy": "NODE_ENV=production webpack -p"
   },
   "author": "holidaying",
-  "license": "MIT",
   "dependencies": {
     "babel-core": "6.x",
     "babel-loader": "6.x",
@@ -35,7 +34,6 @@
     "webpack": "1.x",
     "webpack-dev-server": "^1.16.3"
   },
-  "repository": "ruanyf/webpack-demos",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
