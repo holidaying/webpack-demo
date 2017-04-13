@@ -100,7 +100,7 @@ $ webpack
 1. [HTML Webpack Plugin and Open Browser Webpack Plugin](#demo08-html-webpack-plugin-and-open-browser-webpack-plugin-源码)
 1. [Environment flags环境变量](#demo09-environment-flags-源码)
 1. [Code splitting代码分割](#demo10-code-splitting-源码)
-1. [Code splitting with bundle-loader](#demo11-code-splitting-with-bundle-loader-源码)
+1. [Code splitting with bundle-loader](#通过bundle-loader进行代码分裂-源码)
 1. [Common chunk提取公共文件](#demo12-common-chunk-源码)
 1. [Vendor chunk提取公共的第三方代码](#demo13-vendor-chunk-源码)
 1. [externals全局变量](#demo14-exposing-global-variables-源码)
