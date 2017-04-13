@@ -864,7 +864,7 @@ ReactDOM.render(
 );
 ```
 
-## Demo15: 热模块 ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo15))
+## Demo15 热模块 ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo15))
 
 [Hot Module Replacement](https://github.com/webpack/docs/wiki/hot-module-replacement-with-webpack) (HMR) exchanges, adds, or removes modules while an application is running **without a page reload**.
 
