@@ -3,12 +3,12 @@
 首先教大家2个新技能
 * 1.按照正常github地址情况下，你的github本身不能访问目录。
 
- * 例如要访问vue-demo下的vueCpu文件夹:https://github.com/holidaying/vue-demo/vueCpu（显示404）但是在目录上加上tree/master/：https://github.com/holidaying/vue-demo/tree/master/vueCpu （master是分支名）就可以访问。
+  * 例如要访问vue-demo下的vueCpu文件夹:https://github.com/holidaying/vue-demo/vueCpu（显示404）但是在目录上加上tree/master/：https://github.com/holidaying/vue-demo/tree/master/vueCpu （master是分支名）就可以访问。
 
 * 2.github目录的制作
- * 明确一个问题。一个标题就是一个目录名称
- * 写法\[xx\]\(#题目名称\)#不能少
- * 题目名称的写法规则：abc demo-> abc-demo,Abc-Demo->abc-demo。会忽略:和()即就是题目中所有可见字符的空格均用-连接，中、英文空格要分开，中文空格对应中文-。并且全为小写
+  * 明确一个问题。一个标题就是一个目录名称
+  * 写法\[xx\]\(#题目名称\)#不能少
+  * 题目名称的写法规则：abc demo-> abc-demo,Abc-Demo->abc-demo。会忽略:和()即就是题目中所有可见字符的空格均用-连接，中、英文空格要分开，中文空格对应中文-。并且全为小写
 
 ## 步骤
 
