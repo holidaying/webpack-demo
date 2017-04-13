@@ -810,7 +810,7 @@ module.exports = {
 插件会执行两次这个方法，第一次将公共的第三方代码抽离移到vendor的块中，这个过程之前也讲过会将运行时runtime也转移到vendor块中，第二次执行则是将运行时runtime抽离出来转移到manifest块中。这步操作解决了缓存问题。
 这样处理，最后会生成3个打包文件chunk，app.js是业务代码，vendor则是公共的第三方代码，manifest.js则是运行时。
 
-## Demo14: Exposing global variables ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo14))
+## Demo14: Exposing_global variables ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo14))
 
 webpack可以不处理应用的某些依赖库，使用externals配置后，依旧可以在代码中通过CMD、AMD或者window/global全局的方式访问。如果你想引入一些全局变量, 但是不想被加载处理, 你可以在 `webpack.config.js` 使用 `externals` 模块 ([官方文档](http://webpack.github.io/docs/library-and-externals.html)).
 有时我们希望我们通过script引入的库，如用CDN的方式引入的jquery，我们在使用时，依旧用require的方式来使用，但是却不希望webpack将它又编译进文件中。
