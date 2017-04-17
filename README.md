@@ -98,7 +98,7 @@ $ webpack
 1. [CSS Module](#demo06-css-module-源码)
 1. [UglifyJs Plugin插件](#demo07-uglifyjs-plugin-源码)
 1. [HTML Webpack Plugin and Open Browser Webpack Plugin](#demo08-html-webpack-plugin-and-open-browser-webpack-plugin-源码)
-1. [Environment flags环境变量](#demo09-environment-flags-源码)
+1. [Environment flags环境变量](#demo09-设置环境变量-源码)
 1. [Code splitting代码分割](#demo10-code-splitting-源码)
 1. [Code splitting with bundle-loader](#通过bundle-loader进行代码分裂-源码)
 1. [Common chunk提取公共文件](#demo12-common-chunk-源码)
@@ -533,7 +533,7 @@ $ webpack-dev-server
 
 不用手写`index.html` 也不用手动打开浏览器 Webpack 可以为你做这些事.
 
-## Demo09: 设置环境变量([源码](https://github.com/holidaying/webpack-demos/tree/master/demo09))
+## Demo09: 设置环境变量 ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo09))
 
 你可以利用环境变量来控制特定代码的输出
 
@@ -595,11 +595,12 @@ require.ensure([], function(require){
 此时list.js会被打包成一个单独的chunk文件，大概长这样：
 1.fb874860b35831bc96a8.js
 可读性比较差。我在上一篇结尾也提到了，给它命名的方式，那就是给require.ensure传递第三个参数，如：
-
+```
 require.ensure([], function(require){
     var list = require('./list');
     list.show();
 }, 'list');
+```
 这样就能得到你想要的文件名称：
 首先，你需要用 `require.ensure` to 来定义一个分割的点. ([官方文档](http://webpack.github.io/docs/code-splitting.html))
 
@@ -640,7 +641,7 @@ module.exports = {
 };
 ```
 
-地洞服务.
+启动服务.
 
 ```命令行文件
 $ webpack-dev-server
@@ -741,7 +742,7 @@ module.exports = {
 
 ## Demo13: Vendor chunk ([源码](https://github.com/holidaying/webpack-demos/tree/master/demo13))
 
-利用ebpack.optimize.CommonsChunkPlugin，你可以把第三方库抽离出来
+利用webpack.optimize.CommonsChunkPlugin，你可以把第三方库抽离出来
 
 main.js
 
